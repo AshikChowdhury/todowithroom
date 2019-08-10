@@ -42,7 +42,7 @@ public class NoteRepository {
         private NoteDao noteDao;
 
         private InsertNoteAsyncTask(NoteDao noteDao){
-
+            this.noteDao = noteDao;
         }
 
         @Override
@@ -52,12 +52,13 @@ public class NoteRepository {
         }
     }
 
+
     private static class UpdateNoteAsyncTask extends AsyncTask<Note, Void, Void>{
 
         private NoteDao noteDao;
 
         private UpdateNoteAsyncTask(NoteDao noteDao){
-
+            this.noteDao = noteDao;
         }
 
         @Override
@@ -72,7 +73,7 @@ public class NoteRepository {
         private NoteDao noteDao;
 
         private DeleteNoteAsyncTask(NoteDao noteDao){
-
+            this.noteDao = noteDao;
         }
 
         @Override
@@ -87,7 +88,7 @@ public class NoteRepository {
         private NoteDao noteDao;
 
         private DeleteAllNoteAsyncTask(NoteDao noteDao){
-
+            this.noteDao = noteDao;
         }
 
         @Override
